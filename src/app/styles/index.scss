@@ -1,29 +1,25 @@
-
 @use "variables/global";
-@use "reset";
 @use "themes/normal";
 @use "themes/dark";
 
-
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.app{
-  font:var(--font-m);
-
-  background: var(--bg-color);
-  color: var(--primary-color);
-  min-height: 100vh;
+.app {
+    font: var(--font-m);
+    background: var(--bg-color);
+    color: var(--primary-color);
+    min-height: 100vh;
 }
 
-.content__page{
-  display: flex;
+.content__page {
+    display: flex;
 }
 
-.page__wrapper{
-  flex-grow: 1;
-  padding: 20px;
+.page__wrapper {
+    flex-grow: 1;
+    padding: 20px;
 }
