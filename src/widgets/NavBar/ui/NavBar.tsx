@@ -7,7 +7,7 @@ interface NavBarProps {
     className?: string;
 }
 
-const NavBar = ({ className }: NavBarProps) => (
+export const NavBar = ({ className }: NavBarProps) => (
     <div className={classNames(cls.Navbar, {}, [className])}>
         <div className={cls.links}>
             <AppLink
@@ -24,5 +24,3 @@ const NavBar = ({ className }: NavBarProps) => (
 
     </div>
 );
-
-export default NavBar;
