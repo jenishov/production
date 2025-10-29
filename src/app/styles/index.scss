@@ -1,12 +1,7 @@
-@use "variables/global";
-@use "themes/normal";
-@use "themes/dark";
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+@import "reset";
+@import "variables/global";
+@import "themes/normal";
+@import "themes/dark";
 
 .app {
     font: var(--font-m);
@@ -15,11 +10,11 @@
     min-height: 100vh;
 }
 
-.content__page {
+.content-page {
     display: flex;
 }
 
-.page__wrapper {
+.page-wrapper {
     flex-grow: 1;
     padding: 20px;
 }
