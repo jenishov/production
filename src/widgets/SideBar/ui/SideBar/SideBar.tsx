@@ -2,13 +2,13 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import React, { useState } from 'react';
 import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher';
 import { LangSwitcher } from 'shared/ui/LangSwitcher/LangSwitcher';
+import { useTranslation } from 'react-i18next';
 import cls from './SideBar.module.scss';
-import {useTranslation} from "react-i18next";
 
 interface SideBarProps {
     className?: string;
 }
-const {t} = useTranslation();
+const { t } = useTranslation();
 
 export const SideBar = ({ className }: SideBarProps) => {
     const [collapsed, setCollapsed] = useState(false);

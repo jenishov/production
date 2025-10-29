@@ -15,11 +15,9 @@ export default {
     },
 } as ComponentMeta<typeof Loader>;
 
-const Template: ComponentStory<typeof Loader> = (args) => <Loader {...args} />;
-
+const Template: ComponentStory<typeof Loader> = (args:any) => <Loader {...args} />;
 export const Normal = Template.bind({});
 Normal.args = {};
-
 export const Dark = Template.bind({});
 Dark.args = {};
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
