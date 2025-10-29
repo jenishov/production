@@ -8,11 +8,11 @@ import cls from './SideBar.module.scss';
 interface SideBarProps {
     className?: string;
 }
-const { t } = useTranslation();
+
 
 export const SideBar = ({ className }: SideBarProps) => {
     const [collapsed, setCollapsed] = useState(false);
-
+    const { t } = useTranslation();
     const onToggle = () => {
         setCollapsed((prev) => !prev);
     };
