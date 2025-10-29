@@ -41,6 +41,7 @@ module.exports = {
         'max-len': ['error', { ignoreComments: true, code: 140 }],
         'react/button-has-type': 'warn',
         'i18next/no-literal-string': ['error', { markupOnly: true, ignoreAttribute: ['data-testid', 'to'] }],
+        'no-console': 'warn',
     },
     globals: {
         __IS_DEV__: true,
@@ -50,6 +51,8 @@ module.exports = {
             files: ['**/src/**/*.test.{ts,tsx}'],
             rules: {
                 'i18next/no-literal-string': 'off',
+                'react/jsx-props-no-spreading': 'off',
+                'no-unused-vars': 'off',
             },
         },
     ],
