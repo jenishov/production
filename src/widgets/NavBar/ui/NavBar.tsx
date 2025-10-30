@@ -26,6 +26,5 @@ export const NavBar = ({ className }: NavBarProps) => {
             </div>
 
         </div>
-    )
-
+    );
 };
