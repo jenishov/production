@@ -5,6 +5,7 @@ const initialState: ProfileSchema = {
     readonly: true,
     error: undefined,
     data: undefined,
+    isLoading: false,
 };
 
 export const profileSlice = createSlice({
