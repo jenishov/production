@@ -11,7 +11,9 @@ interface Configuration extends WebpackConfiguration {
 }
 
 export function buildWebpackConfig(options: BuildOptions): Configuration {
-    const { paths, mode, isDev } = options;
+    const {
+        paths, mode, isDev,
+    } = options;
 
     return {
         mode,
