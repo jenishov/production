@@ -1,7 +1,7 @@
 export {
     Profile,
     ProfileSchema,
-    ValidateProofileError,
+    ValidateProfileError,
 } from './model/types/profile';
 
 export {

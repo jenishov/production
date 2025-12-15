@@ -1,15 +1,15 @@
 import { Country } from 'entities/Country';
 import { Currency } from 'entities/Currency';
-import { validateProfileData } from 'entities/Profile/model/services/validateProfileData/validateProfileData';
-import { ValidateProofileError } from 'entities/Profile';
+import { ValidateProfileError } from 'entities/Profile/model/types/profile';
+import { validateProfileData } from './validateProfileData';
 
 const data = {
     username: 'admin',
-    age: 23,
-    country: Country.Kazakhstan,
-    lastname: 'jenishov',
+    age: 22,
+    country: Country.Ukraine,
+    lastname: 'ulbi tv',
     first: 'asd',
-    city: 'bish',
+    city: 'asf',
     currency: Currency.USD,
 };
 
@@ -24,30 +24,33 @@ describe('validateProfileData.test', () => {
         const result = validateProfileData({ ...data, first: '', lastname: '' });
 
         expect(result).toEqual([
-            ValidateProofileError.INCORRECT_USER_DATA,
+            ValidateProfileError.INCORRECT_USER_DATA,
         ]);
     });
+
     test('incorrect age', async () => {
         const result = validateProfileData({ ...data, age: undefined });
 
         expect(result).toEqual([
-            ValidateProofileError.INCORRECT_AGE,
+            ValidateProfileError.INCORRECT_AGE,
         ]);
     });
+
     test('incorrect country', async () => {
         const result = validateProfileData({ ...data, country: undefined });
 
         expect(result).toEqual([
-            ValidateProofileError.INCORRECT_COUNTRY,
+            ValidateProfileError.INCORRECT_COUNTRY,
         ]);
     });
+
     test('incorrect all', async () => {
         const result = validateProfileData({});
 
         expect(result).toEqual([
-            ValidateProofileError.INCORRECT_USER_DATA,
-            ValidateProofileError.INCORRECT_AGE,
-            ValidateProofileError.INCORRECT_COUNTRY,
+            ValidateProfileError.INCORRECT_USER_DATA,
+            ValidateProfileError.INCORRECT_AGE,
+            ValidateProfileError.INCORRECT_COUNTRY,
         ]);
     });
 });

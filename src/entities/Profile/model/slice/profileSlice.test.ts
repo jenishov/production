@@ -3,7 +3,7 @@ import {
     profileReducer,
     ProfileSchema,
     updateProfileData,
-    ValidateProofileError,
+    ValidateProfileError,
 } from 'entities/Profile';
 import { Country } from 'entities/Country';
 import { Currency } from 'entities/Currency';
@@ -53,7 +53,7 @@ describe('profileSlice.test', () => {
     test('test update profile service pending', () => {
         const state: DeepPartial<ProfileSchema> = {
             isLoading: false,
-            validateErrors: [ValidateProofileError.SERVER_ERROR],
+            validateErrors: [ValidateProfileError.SERVER_ERROR],
         };
         expect(profileReducer(
             state as ProfileSchema,
@@ -68,7 +68,7 @@ describe('profileSlice.test', () => {
     test('test update profile service fullfiled', () => {
         const state: DeepPartial<ProfileSchema> = {
             isLoading: true,
-            validateErrors: [ValidateProofileError.SERVER_ERROR],
+            validateErrors: [ValidateProfileError.SERVER_ERROR],
         };
         expect(profileReducer(
             state as ProfileSchema,
