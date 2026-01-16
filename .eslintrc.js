@@ -49,6 +49,7 @@ module.exports = {
         'no-console': 'warn',
         'no-param-reassign': 'off',
         'no-undef': 'off',
+        'react/no-array-index-key': 'off',
     },
     globals: {
         __IS_DEV__: true,
